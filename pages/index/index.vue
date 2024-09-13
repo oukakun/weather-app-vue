@@ -1,15 +1,15 @@
 <template>
   <div :class="['app', getWeatherBackground]">
-    <h1>天气应用</h1>
+    <h1>{{ $t('weatherApp') }}</h1>
     <div v-if="weather">
-      <h2>Tokyo的天气</h2>
-      <p>温度：{{ getTemperature }}</p>
-      <p>天气：{{ weather.weather[0].description }}
+      <h2>{{ $t('tokyoWeather') }}</h2>
+      <p>{{ $t('temperature') }}：{{ getTemperature }}</p>
+      <p>{{ $t('weather') }}：{{ $t(weather.weather[0].description) }}
         <UIcon name="i-wi:day-cloudy" class="w-10 h-10 text-primary-500 align-middle" />
       </p>
-      <UButton @click="toggleTemperature">切换到{{ isCelsius ? "华氏" : "摄氏" }}</UButton>
+      <UButton @click="toggleTemperature">{{ $t('toggleTo') + (isCelsius ? $t('fahrenheit') : $t('celsius')) }}</UButton>
     </div>
-    <p v-else>加载中...</p>
+    <p v-else>{{ $t('loading') }}</p>
   </div>
 </template>
 

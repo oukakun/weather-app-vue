@@ -1,3 +1,4 @@
+import { defineNuxtConfig } from 'nuxt/config'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -18,5 +19,14 @@ export default defineNuxtConfig({
     port:4000
   },
 
-  modules: ['@nuxt/ui']
+  modules: ['@nuxtjs/i18n', '@nuxt/ui'],
+  i18n: {
+    langDir: 'locales',
+    locales: [
+      { code: 'zh', iso: 'zh-CN', file: 'zh.json' },
+      { code: 'en', iso: 'en-US', file: 'en.json' }
+    ],
+    defaultLocale: 'zh',
+    strategy: 'no_prefix',
+  }
 })
