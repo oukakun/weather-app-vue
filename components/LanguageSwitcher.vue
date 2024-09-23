@@ -1,12 +1,34 @@
 <template>
-  <UButton
+  <div class="language-switcher">
+    <UButton
     @click="switchLanguage"
-    class="language-switcher"
+    class=""
     color="indigo"
     variant="soft"
   >
     {{ $i18n.locale === 'zh' ? 'EN' : '中文' }}
   </UButton>
+  <UButton
+    @click="switchLanguage"
+    class=""
+    color="indigo"
+    variant="soft"
+  >
+  <NuxtLink to="/old">Old</NuxtLink>
+
+  </UButton>
+  <UButton
+    @click="switchLanguage"
+    class=""
+    color="indigo"
+    variant="soft"
+  >
+  <NuxtLink to="/">new</NuxtLink>
+
+  </UButton>
+  </div>
+
+
 </template>
 
 <script setup>
