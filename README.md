@@ -1,75 +1,91 @@
-# Nuxt 3 Minimal Starter
+# Weather App
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+这是一个基于Nuxt3的天气查询应用，用户可以输入位置来查询当前的天气信息。
 
-## Setup
+[English](README_EN.md) | [日本語](README_JP.md)
 
-Make sure to install the dependencies:
+## 功能
 
-```bash
-# npm
-npm install
+- **位置输入**：用户可以输入位置来查询天气。
+- **天气显示**：显示当前天气的图标、温度、描述。
+- **湿度和风速**：显示当前湿度和风速。
+- **错误处理**：当输入的位置无法找到时，显示错误信息。
 
-# pnpm
-pnpm install
+## 技术栈
 
-# yarn
-yarn install
+- **Nuxt3**：用于构建Vue.js应用的框架。
+- **Vue 3**：用于构建用户界面的JavaScript框架。
+- **Axios**：用于进行HTTP请求的库。
+- **OpenWeatherMap API**：用于获取天气数据的API。
 
-# bun
-bun install
+## 安装
+
+1. 克隆仓库
+
+    ```bash
+    git clone https://github.com/yourusername/weather-app.git
+    ```
+
+2. 进入项目目录
+
+    ```bash
+    cd weather-app
+    ```
+
+3. 安装依赖
+
+    ```bash
+    npm install
+    ```
+
+## 使用
+
+1. 启动开发服务器
+
+    ```bash
+    npm run dev
+    ```
+
+2. 打开浏览器并访问 `http://localhost:3000`
+
+## 配置
+
+在 `pages/index.vue` 文件中，找到以下代码并替换为你的 OpenWeatherMap API 密钥：
+
+```javascript
+const weatherResponse = await axios.get(
+  "https://api.openweathermap.org/data/2.5/weather",
+  {
+    params: {
+      q: location.value,
+      appid: "你的API密钥",
+      units: "metric",
+    },
+  }
+);
 ```
 
-## Development Server
+## 目录结构
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+```plaintext
+weather-app/
+├── assets/
+├── components/
+├── layouts/
+├── pages/
+│   └── index.vue
+├── plugins/
+├── static/
+├── store/
+├── README.md
+└── nuxt.config.js
 ```
 
-## Production
+## 贡献
 
-Build the application for production:
+欢迎提交问题和拉取请求。
 
-```bash
-# npm
-npm run build
+## 许可证
 
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+[MIT](LICENSE)
+---
