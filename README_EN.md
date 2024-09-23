@@ -11,6 +11,13 @@ This is a weather query application based on Nuxt3, where users can input a loca
 - **Humidity and Wind Speed**: Displays the current humidity and wind speed.
 - **Error Handling**: Displays an error message when the input location cannot be found.
 
+## Tech Stack
+
+- **Nuxt3**: A framework for building Vue.js applications.
+- **Vue 3**: A JavaScript framework for building user interfaces.
+- **Axios**: A library for making HTTP requests.
+- **OpenWeatherMap API**: An API for fetching weather data.
+
 ## Installation
 
 1. Clone the repository
