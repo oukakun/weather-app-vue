@@ -1,56 +1,56 @@
-# Weather App
+# 天気アプリ
 
-这是一个基于Nuxt3的天气查询应用，用户可以输入位置来查询当前的天气信息。
+これはNuxt3に基づいた天気情報を検索するアプリケーションで、ユーザーは位置を入力して現在の天気情報を検索できます。
 
-[English](README_EN.md) | [日本語](README_JP.md)
+[中文](README_ZH.md) | [English](README_EN.md)
 
-## 功能
+## 機能
 
-- **位置输入**：用户可以输入位置来查询天气。
-- **天气显示**：显示当前天气的图标、温度、描述。
-- **湿度和风速**：显示当前湿度和风速。
-- **错误处理**：当输入的位置无法找到时，显示错误信息。
+- **位置入力**：ユーザーは位置を入力して天気を検索できます。
+- **天気表示**：現在の天気アイコン、温度、説明を表示します。
+- **湿度と風速**：現在の湿度と風速を表示します。
+- **エラーハンドリング**：入力された位置が見つからない場合、エラーメッセージを表示します。
 
-## 技术栈
+## 技術スタック
 
-- **Nuxt3**：用于构建Vue.js应用的框架。
-- **Vue 3**：用于构建用户界面的JavaScript框架。
-- **Axios**：用于进行HTTP请求的库。
-- **OpenWeatherMap API**：用于获取天气数据的API。
+- **Nuxt3**：Vue.jsアプリケーションを構築するためのフレームワーク。
+- **Vue 3**：ユーザーインターフェースを構築するためのJavaScriptフレームワーク。
+- **Axios**：HTTPリクエストを行うためのライブラリ。
+- **OpenWeatherMap API**：天気データを取得するためのAPI。
 
-## 安装
+## インストール
 
-1. 克隆仓库
+1. リポジトリをクローン
 
     ```bash
     git clone https://github.com/yourusername/weather-app.git
     ```
 
-2. 进入项目目录
+2. プロジェクトディレクトリに移動
 
     ```bash
     cd weather-app
     ```
 
-3. 安装依赖
+3. 依存関係をインストール
 
     ```bash
     npm install
     ```
 
-## 使用
+## 使用方法
 
-1. 启动开发服务器
+1. 開発サーバーを起動
 
     ```bash
     npm run dev
     ```
 
-2. 打开浏览器并访问 `http://localhost:3000`
+2. ブラウザを開いて `http://localhost:3000` にアクセス
 
-## 配置
+## 設定
 
-在 `pages/index.vue` 文件中，找到以下代码并替换为你的 OpenWeatherMap API 密钥：
+`pages/index.vue` ファイルで、以下のコードを見つけて、あなたの OpenWeatherMap API キーに置き換えてください：
 
 ```javascript
 const weatherResponse = await axios.get(
@@ -58,14 +58,14 @@ const weatherResponse = await axios.get(
   {
     params: {
       q: location.value,
-      appid: "你的API密钥",
+      appid: "あなたのAPIキー",
       units: "metric",
     },
   }
 );
 ```
 
-## 目录结构
+## ディレクトリ構造
 
 ```plaintext
 weather-app/
@@ -81,11 +81,10 @@ weather-app/
 └── nuxt.config.js
 ```
 
-## 贡献
+## 貢献
 
-欢迎提交问题和拉取请求。
+問題やプルリクエストを自由に提出してください。
 
-## 许可证
+## ライセンス
 
 [MIT](LICENSE)
----

@@ -2,7 +2,7 @@
 
 This is a weather query application based on Nuxt3, where users can input a location to query the current weather information.
 
-[中文](README.md) | [日本語](README_JP.md)
+[中文](README_ZH.md) | [日本語](README.md)
 
 ## Features
 
