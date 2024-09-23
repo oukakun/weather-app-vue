@@ -27,7 +27,7 @@
           <div class="info-humidity">
             <span>{{ getHumidity }}%</span>
           </div>
-          <p>Humidity</p>
+          <p>{{ $t('humidity') }}</p>
         </div>
       </div>
 
@@ -37,7 +37,7 @@
           <div class="info-wind">
             <span>{{ getWindSpeed }}Km/h</span>
           </div>
-          <p>Wind Speed</p>
+          <p>{{ $t('windSpeed') }}</p>
         </div>
       </div>
 

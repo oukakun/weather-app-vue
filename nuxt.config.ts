@@ -23,10 +23,10 @@ export default defineNuxtConfig({
   i18n: {
     langDir: 'locales',
     locales: [
-      { code: 'zh', iso: 'zh-CN', file: 'zh.json' },
-      { code: 'en', iso: 'en-US', file: 'en.json' }
+      { code: 'en', iso: 'en-US', file: 'en.json' },
+      { code: 'ja', iso: 'ja-JP', file: 'ja.json'  }
     ],
-    defaultLocale: 'zh',
+    defaultLocale: 'en',
     strategy: 'no_prefix',
   }
 })

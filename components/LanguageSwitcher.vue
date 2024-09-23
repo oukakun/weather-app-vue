@@ -6,9 +6,9 @@
     color="indigo"
     variant="soft"
   >
-    {{ $i18n.locale === 'zh' ? 'EN' : '中文' }}
+    {{ $i18n.locale === 'ja' ? 'EN' : '日本語' }}
   </UButton>
-  <UButton
+  <!-- <UButton
     @click="switchLanguage"
     class=""
     color="indigo"
@@ -25,7 +25,7 @@
   >
   <NuxtLink to="/">new</NuxtLink>
 
-  </UButton>
+  </UButton> -->
   </div>
 
 
@@ -35,7 +35,7 @@
 const { locale, setLocale } = useI18n()
 
 const switchLanguage = () => {
-  setLocale(locale.value === 'zh' ? 'en' : 'zh')
+  setLocale(locale.value === 'ja' ? 'en' : 'ja')
 }
 </script>
 

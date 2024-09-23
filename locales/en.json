@@ -1,20 +1,4 @@
 {
-  "welcome": "Welcome to Nuxt 3",
-  "weatherApp": "Weather App",
-  "tokyoWeather": "Weather in Tokyo",
-  "temperature": "Temperature",
-  "weather": "Weather",
-  "toggleTo": "Toggle to ",
-  "celsius": "Celsius",
-  "fahrenheit": "Fahrenheit",
-  "loading": "Loading...",
-  "clear sky": "Clear sky",
-  "few clouds": "Few clouds",
-  "scattered clouds": "Scattered clouds",
-  "broken clouds": "Broken clouds",
-  "shower rain": "Shower rain",
-  "rain": "Rain",
-  "thunderstorm": "Thunderstorm",
-  "snow": "Snow",
-  "mist": "Mist"
+  "humidity": "Humidity",
+  "windSpeed": "Wind Speed"
 }
